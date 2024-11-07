@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <!-- main website -->
+    <div id="maincontent">
+      <header>
+        <i class="fa-solid fa-bars" id="menubar"></i>
+        <div class="logo"><strong>SG</strong> Tours</div>
+
+        <!-- navitems -->
+        <div class="navitems">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#package">Package</a>
+          <a href="#book">Book</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass searchicon"></i>
+          <i class="fa-solid fa-power-off" onclick="logout()"></i>
+        </div>
+
+        <!-- form -->
+        <form action="#" class="searchcontainer">
+          <input type="search" placeholder="search...." class="searchdata" />
+          <button class="fa solid fa-magnifying-glass" id="seardatbtn"></button>
+        </form>
+      </header>
+
+      <!-- HOME -->
+      <section class="home" id="home">
+        <div class="content">
+          <h3>Adventure awaits - let's go find it</h3>
+          <p>Discover a world of wonder. Book your next journey with us</p>
+          <a href="#" class="hbtn">Discover more</a>
+        </div>
+
+        <div class="controls">
+          <span class="vidbtn active" data-src="./five.mp4"></span>
+          <span class="vidbtn" data-src="./one.mp4"></span>
+          <span class="vidbtn" data-src="./four.mp4"></span>
+          <span class="vidbtn" data-src="./nature.mp4"></span>
+        </div>
+
+        <div class="videocontainer">
+          <video src="./five.mp4" id="videoslider" loop autoplay muted></video>
+        </div>
+      </section>
+
+      <!-- about page -->
+      <h3 class="ahead">About us</h3>
+      <div class="aboutpage" id="about">
+        <!-- Left Side Image Section -->
+        <div class="aboutimage">
+          <img src="./im5.avif" alt="Scenic Destination" />
+        </div>
+
+        <!-- Right Side Content Section -->
+        <div class="aboutcontent">
+          <h2>About SG Tours :</h2>
+          <p>
+            Welcome to our tour agency! We are passionate about creating
+            unforgettable travel experiences that connect you with the beauty
+            and diversity of the world.
+          </p>
+          <p>
+            Our mission is to make your dream destinations accessible,
+            enjoyable, and full of discovery. With expert guides and carefully
+            crafted itineraries, we take you on adventures that immerse you in
+            the culture, history, and natural wonders of each location.
+          </p>
+          <p>
+            Join us on a journey of a lifetime and experience travel like never
+            before!
+          </p>
+          <button onclick="learnMore()">Learn More</button>
+        </div>
+      </div>
+
+      <!-- package -->
+
+      <!-- package in india-->
+      <div class="packagesection" id="package">
+        <h2>Tour Packages in India</h2>
+        <div class="packagesbox">
+          <div class="package">
+            <img src="./pack1.jpg" alt="" />
+            <div class="packagedetail">
+              <h3>Srinagar tour Package</h3>
+              <p>
+                Srinagar, the summer capital of Jammu and Kashmir, is famous for
+                its stunning Dal Lake, serene houseboats.
+              </p>
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>4 Days / 3 Nights</li>
+                <li><strong>location:</strong> Srinagar, city in J&K</li>
+                <li>
+                  <strong>Places: </strong>Dal Lake,Sonamarg hill
+                  station,Yousmarg,Gulmarg.
+                </li>
+              </ul>
+              <span class="pprice">Rs:8000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Srinagar Tour Package')">
+                Book Now
+              </button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+
+          <div class="package">
+            <img src="./pack2.jpg" alt="" />
+            <div class="packagedetail">
+              <h3>Andaman tour package</h3>
+              <p>
+                It includes Radhanagar Beach on Havelock Island and adventure
+                sports like snorkeling and sea-walking.
+              </p>
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>7 Days / 6 Nights</li>
+                <li><strong>location:</strong> Andaman ,in Bay of Bengal.</li>
+                <li>
+                  <strong>Places: </strong>Havelock Island, Neil Island, Port
+                  Blair, Mayabunder.
+                </li>
+              </ul>
+              <span class="pprice">Rs:13000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Andaman Tour Package')">
+                Book Now
+              </button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+
+          <div class="package">
+            <img src="./pack7.jpg" alt="" />
+            <div class="packagedetail">
+              <h3>Darjeeling tour Package</h3>
+              <p>
+                Darjeeling has many tourist places, historic sites, and mountain
+                views,famous for its tea,called the "Champagne of Teas."
+              </p>
+
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>5 Days / 4 Nights</li>
+                <li>
+                  <strong>location: </strong>Darjeeling ,City in West Bengal
+                </li>
+                <li>
+                  <strong>Places: </strong>Batasia Loop,Tiger Hill, Ghoom
+                  Monastery,Chowrasta and Mall Road.
+                </li>
+              </ul>
+              <span class="pprice">Rs:11000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Darjeeling Tour Package')">
+                Book Now
+              </button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- package in international -->
+
+      <div class="packagesection">
+        <h2>International holiday packages</h2>
+        <div class="packagesbox">
+          <div class="package">
+            <img src="./pack4.avif" alt="" />
+            <div class="packagedetail">
+              <h3>Dubai tour Package</h3>
+              <p>
+                A city of futuristic skyscrapers, luxurious attractions & iconic
+                landmarks like Burj Khalifa and Palm Jumeirah.
+              </p>
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>8 Days / 7 Nights</li>
+                <li>
+                  <strong>location:</strong> Dubai,City in United Arab Emirates.
+                </li>
+                <li>
+                  <strong>Places: </strong>Jumeriah Beach, Kite Beach,Burj
+                  Khalifa, Dubai Mall,Dubai Miracle Garden.
+                </li>
+              </ul>
+              <span class="pprice">Rs:45000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Dubai Tour Package')">Book Now</button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+
+          <div class="package">
+            <img src="./pack5.cms" alt="" />
+            <div class="packagedetail">
+              <h3>Singapore tour package</h3>
+              <p>
+                A vibrant city-state known for its stunning Marina Bay Sands,
+                lush Gardens in bay & diverse cultural districts.
+              </p>
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>10 Days / 9 Nights</li>
+                <li>
+                  <strong>location:</strong> Singapore, located in Southeast
+                  Asia.
+                </li>
+                <li>
+                  <strong>Places: </strong>Marina Bay Sands, Sentosa Island and
+                  Merlion,Cloud Forest.
+                </li>
+              </ul>
+              <span class="pprice">Rs:50000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Singapore Tour Package')">
+                Book Now
+              </button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+
+          <div class="package">
+            <img src="./pack6.jpg" alt="" />
+            <div class="packagedetail">
+              <h3>Bangkok tour Package</h3>
+              <p>
+                Bangkok, the bustling capital of Thailand famous for ornate
+                temples like Wat Arun and Wat Phra Kaew,Grand Palace.
+              </p>
+
+              <ul class="moredetail">
+                <li><strong>Duraion:</strong>6 Days / 5 Nights</li>
+                <li><strong>location: </strong>Capital of Thailand.</li>
+                <li>
+                  <strong>Places: </strong>The Grand Palace, Wat Phra
+                  Chetuphon,Chatuchak Weekend Market.
+                </li>
+              </ul>
+              <span class="pprice">Rs:60000 *<sub>per adult</sub></span>
+              <button onclick="bookNow('Bangkok tour Package')">
+                Book Now
+              </button>
+              <a href="https://www.makemytrip.com/" target="_blank"
+                ><button style="background-color: rgb(16, 93, 16)">
+                  Details
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- booking -->
+      <h3 class="bhead">Book now</h3>
+      <div class="bookcontainer" id="book">
+        <!-- Left Side Image -->
+        <div class="imagesection">
+          <img src="./img3.png" alt="Tour Destination" />
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="form">
+          <h2>Book Your Tour</h2>
+          <form id="bookingForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="date">Tour Date</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="packages">Select Package</label>
+            <select id="packages" name="packages" required>
+              <option value="standard">Standard Package</option>
+              <option value="deluxe">Deluxe Package</option>
+              <option value="premium">Premium Package</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- services -->
+      <h3 class="shead">Services</h3>
+      <div class="servicecontainer">
+        <div class="servicelist">
+          <i class="fas fa-utensils"></i>
+          <h2>Free Food</h2>
+          <p>
+            Enjoy complimentary meals and local delicacies throughout your tour.
+          </p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+
+        <div class="servicelist">
+          <i class="fas fa-hotel"></i>
+          <h2>Hotel Accommodation</h2>
+          <p>
+            Stay in comfortable, premium hotels as part of your tour package.
+          </p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+
+        <div class="servicelist">
+          <i class="fas fa-plane"></i>
+          <h2>Airport Transfers</h2>
+          <p>
+            We offer convenient airport pick-up and drop-off services throughout
+            your tour.
+          </p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+
+        <div class="servicelist">
+          <i class="fas fa-bullhorn"></i>
+          <h2>Safty guide</h2>
+          <p>Explore top destination places with our professional guides.</p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+
+        <div class="servicelist">
+          <i class="fas fa-globe-asia"></i>
+          <h2>Around the world</h2>
+          <p>
+            Explore the places around the world with our professional guides.
+          </p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+
+        <div class="servicelist">
+          <i class="fas fa-hiking"></i>
+          <h2>Adventures</h2>
+          <p>Explore top adventurals places with our professional guides.</p>
+          <a href="https://www.gtholidays.in/" target="_blank"
+            ><button class="sbtn">Learn More</button></a
+          >
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div class="contactsection" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+          <!-- Contact Form -->
+          <form class="contact-form" action="submit-form.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <!-- Embedded Google Map -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d250637.19267852895!2d76.9458176!3d11.023155199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1730867421574!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+
+      <footer class="footer">
+        <div class="footercontainer">
+          <div class="fabout">
+            <h3>SG Tour Company</h3>
+            <p>
+              Your trusted travel partner for amazing and memorable experience
+              around the world
+            </p>
+          </div>
+
+          <div class="flinks">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#package">Package</a></li>
+              <li><a href="#book">Book</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="fcontact">
+            <h3>Contact us</h3>
+            <p><strong>Phone:</strong> +344 234 2332</p>
+            <p><strong>Email:</strong> sgtour@holiday.com</p>
+            <p>
+              <strong>Address:</strong> SG Holidays Pvt
+              LTD,Nungambakkam,Chennai-600006 Tamilnadu.
+            </p>
+          </div>
+
+          <div class="fsocial">
+            <h3>Follow us</h3>
+            <div class="ficons">
+              <a
+                href="https://www.facebook.com/"
+                class="fab fa-facebook"
+                target="_blank"
+              ></a>
+              <a
+                href="https://twitter.com/?lang=en"
+                class="fab fa-twitter"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                class="fab fa-instagram"
+                target="_blank"
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                class="fab fa-youtube"
+                target="_blank"
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fbottom">
+          <p>&copy; 2023 SG Tour Company.All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <!--main content close  -->
+
+    <!--register and login form  -->
+
+    <div id="formoverlay" class="overlay">
+      <!-- register form -->
+      <div id="registerform" class="formcontainer">
+        <h2>Register</h2>
+        <form onsubmit="register(event)">
+          <label for="regusername">Username:</label>
+          <input type="text" id="regusername" required />
+
+          <label for="regpassword">Password:</label>
+          <input type="password" id="regpassword" required />
+
+          <button type="submit" id="regbutton">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="toggleform()">Login here</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- login form -->
+
+      <div id="loginform" class="formcontainer" style="display: none">
+        <h2>Login Form</h2>
+        <form onsubmit="login(event)">
+          <label for="loginusername">Username:</label>
+          <input type="text" id="loginusername" required />
+
+          <label for="loginpassword">Password:</label>
+          <input type="password" id="loginpassword" required />
+
+          <button type="submit" id="logbtn">login</button>
+          <p>
+            Don't have an account?
+            <a href="#" onclick="toggleform()">Register here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
